@@ -77,9 +77,9 @@ async def send_birthdays(message: types.Message):
 
 async def scheduler():
     while True:
-        await asyncio.sleep(5)
+        await asyncio.sleep(60)
         now = datetime.datetime.now(timezone)
-        if now.hour == 3 and now.minute == 7:
+        if now.hour == 3 and now.minute == 0:
             await check_birthday()
         print(now)
 
